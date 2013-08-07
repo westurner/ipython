@@ -191,13 +191,13 @@ class Pdb(OldPdb):
     """Modified Pdb class, does not load readline."""
 
     def __init__(self,color_scheme='NoColor',completekey=None,
-                 stdin=None, stdout=None):
+                 stdin=None, stdout=None, skip=None):
 
         # Parent constructor:
         if has_pydb and completekey is None:
             OldPdb.__init__(self,stdin=stdin,stdout=io.stdout)
         else:
-            OldPdb.__init__(self,completekey,stdin,stdout)
+            OldPdb.__init__(self,completekey,stdin,stdout,skip=skip)
 
         self.prompt = prompt # The default prompt is '(Pdb)'
 
