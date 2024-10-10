@@ -2,10 +2,6 @@
  8.x Series
 ============
 
-.. _version 8.28:
-
-IPython 8.28
-============
 - Add support for WEBP to ``IPython.display.Image``. :ghpull:`14526`
 
 
